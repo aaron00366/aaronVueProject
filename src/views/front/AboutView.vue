@@ -1,5 +1,5 @@
 <template>
-  <section class="breadcrumb_section text-uppercase"  :style="{ backgroundImage: `url(${innerHeroImg})` }">
+  <section class="breadcrumb_section text-uppercase" :style="{ backgroundImage: `url(${innerHeroImg})` }">
     <div class="container">
       <h1 class="page_title text-white wow fadeInUp" data-wow-delay=".1s">關於我們</h1>
       <ul class="breadcrumb_nav ul_li wow fadeInUp" data-wow-delay=".2s">
@@ -20,9 +20,8 @@
             <div class="row align-items-center justify-content-lg-between">
               <div class="col-lg-6 col-md-6 order-last"  data-aos="fade-left">
                 <div class="about_image1 wow fadeInRight" data-wow-delay=".1s">
-                  <!-- <img src="assets/images/cafeImg.jpg" alt="image_not_found"> -->
-                  <div class="w-100" style="background-image: url(../src/assets/image/cafeImg.jpg);background-size: cover;
-            background-position: center center;padding: 188px;background-repeat: no-repeat;"></div>
+                  <img src="assets/image/cafeImg.jpg" alt="image_not_found">
+                  
                 </div>
               </div>
               <div class="col-lg-6 col-md-6"  data-aos="fade-right">
