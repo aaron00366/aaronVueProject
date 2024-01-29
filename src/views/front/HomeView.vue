@@ -1,7 +1,7 @@
 <template>
   <section class="slider_section slider_dark homeBanner">
           <div class="main_slider pb-0 wow fadeInUp" data-wow-delay=".1s">
-            <div class="slider_item text-white" style="background-image: url(../src/assets/image/img_01.png);">
+            <div class="slider_item text-white" :style="{ backgroundImage: `url(${bannerImg})` }">
               <div class="container">
                 <div class="row justify-content-lg-start justify-content-md-center">
                   <div class="col-lg-6 col-md-8">
@@ -34,10 +34,8 @@
                   <div class="item_icon">
                     <span class="item_serial">1</span>
                     <span class="d-flex align-items-center justify-content-center">
-                    <div style="background-image: url(../src/assets/image/icon_01.png);background-size: cover;
-                    background-position: center center;
-                    width: 35px;
-                    height: 35px;"></div>
+                    
+                    <!-- <img src="../../assets/image/icon_01.png" alt=""> -->
                   </span>
                   </div>
                   <h3 class="item_title">獨特風味</h3>
@@ -355,7 +353,7 @@
 </template>
 
 <script>
-
+import bannerImg from '/src/assets/image/img_01.png'
 import carStore from '../../stores/cart'
 import { mapActions, mapState } from 'pinia'
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
@@ -379,7 +377,8 @@ export default {
           },
           message: ''
         }
-      }
+      },
+      bannerImg:bannerImg
     }
   },
   methods: {
