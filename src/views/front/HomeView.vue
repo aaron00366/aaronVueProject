@@ -259,7 +259,7 @@
                   </div>
 
                   <div class="offerinfo_col col-lg-4">
-                    <div class="offer_info_item opening_time text-white wow fadeInUp" data-wow-delay=".2s" style="background-image: url(../src/assets/image/offer/bg_01.png);">
+                    <div class="offer_info_item opening_time text-white wow fadeInUp" data-wow-delay=".2s" :style="{ backgroundImage: `url(${opentimeImg})` }">
                       <h3 class="offer_info_title text-white">營業時間. . . . <i class="fal fa-clock"></i></h3>
                       <ul class="ul_li_block">
                         <li>
@@ -341,6 +341,7 @@
 
 <script>
 import bannerImg from '@/assets/image/img_01.png'
+import opentimeImg from '@/assets/image/offer/bg_01.png'
 import carStore from '../../stores/cart'
 import { mapActions, mapState } from 'pinia'
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
@@ -365,7 +366,8 @@ export default {
           message: ''
         }
       },
-      bannerImg:bannerImg
+      bannerImg:bannerImg,
+      opentimeImg:opentimeImg
     }
   },
   methods: {
