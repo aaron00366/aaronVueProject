@@ -21,7 +21,7 @@
     <section class="cart_section sec_ptb_120 bg_default_gray">
         <div class="container container_boxed">
             <div class="checkout_form">
-              <v-form @submit="onSubmit" v-slot="{errors}">
+              <v-form @submit="addOrder" v-slot="{errors}">
       <div class="row">
         <div class="col-lg-6">
           <div class="form_item">
