@@ -41,24 +41,24 @@
          </div>
          <ul class="btns_group ul_li">
          <li>
-         <div class="quantity_input quantity_boxed">
+         <!-- <div class="quantity_input quantity_boxed">
          <h4 class="quantity_title text-uppercase">數量</h4>
          <form action="#">
         <button type="button" class="input_number_decrement">–</button>
         <input class="input_number" type="text" value="2">
         <button type="button" class="input_number_increment">+</button>
          </form>
-         </div>
-         </li>
+         </div> -->
+        </li>
          <li>
-            <button type="button" class="btn btn_border border_black text-uppercase"  @click="addToCart(item.id)">加入購物車</button>
+            <button type="button" class="btn btn_border border_black text-uppercase"  @click="addToCart(product.id)">加入購物車</button>
         </li>
          </ul>
          </div>
         </div>
         </div>
 
-        <div class="product_description_wrap wow fadeInUp" data-wow-delay=".3s">
+        <div class="product_description_wrap mt-3">
          <ul class="tabs_nav ul_li nav" role="tablist">
         <li>
         <button class="active" data-bs-toggle="tab" data-bs-target="#product_description" type="button" role="tab" aria-selected="true">產品敘述</button>
@@ -82,7 +82,7 @@
         </div>
 
         <div class="related_products">
-        <h4 class="area_title text-uppercase mb-0 wow fadeInUp" data-wow-delay=".1s">相關產品</h4>
+        <h4 class="area_title mb-0">相關產品</h4>
         <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6" v-for="item in CategoryProducts" :key="item.id">
             <div class="shop_card wow fadeInUp" data-wow-delay=".1s">

@@ -57,7 +57,7 @@ app.use(CKEditor);
 app.use(bootstrap)
 app.use(i18n)
 app.component('Loading', Loading);
-app.component('Form', Form);
-app.component('Field', Field);
+app.component('VForm', Form);
+app.component('VField', Field);
 app.component('ErrorMessage', ErrorMessage);
 app.mount('#app');
