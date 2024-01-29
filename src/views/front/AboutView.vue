@@ -10,7 +10,8 @@
     <div class="breadcrumb_icon_wrap">
       <div class="container">
         <div class="breadcrumb_icon wow fadeInUp" data-wow-delay=".3s">
-          <img src="@/assets/image/icon_01">
+          <img src="@/assets/image/icon_01.png">
+          <span class="bg_shape"></span>
         </div>
       </div>
     </div>
@@ -20,7 +21,7 @@
             <div class="row align-items-center justify-content-lg-between">
               <div class="col-lg-6 col-md-6 order-last"  data-aos="fade-left">
                 <div class="about_image1 wow fadeInRight" data-wow-delay=".1s">
-                  <img src="assets/image/cafeImg.jpg" alt="image_not_found">
+                  <img src="@/assets/image/cafeImg.jpg" alt="image_not_found">
                   
                 </div>
               </div>

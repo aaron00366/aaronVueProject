@@ -11,13 +11,8 @@
       <div class="container">
         <div class="breadcrumb_icon wow fadeInUp" data-wow-delay=".3s">
           <!-- <img src="../src/assets/image/icon_01"> -->
-          <span class="bg_shape d-flex align-items-center justify-content-center">
-            <div style="background-image: url(../src/assets/image/icon_01.png);background-size: cover;
-            background-position: center center;
-            width: 35px;
-            height: 35px;
-            transform: rotate(-45deg);"></div>
-          </span>
+          <img src="@/assets/image/icon_01.png">
+          <span class="bg_shape"></span>
         </div>
       </div>
     </div>

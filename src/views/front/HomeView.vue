@@ -108,7 +108,7 @@
 
                 <div class="col-lg-6 col-md-4">
                   <div class="abtn_wrap text-lg-end text-md-end wow fadeInUp" data-wow-delay=".3s">
-                    <a class="btn btn_border border_black" href="shop.html">查看所有產品</a>
+                    <router-link  class="btn btn_border border_black" to="/products">查看所有產品</router-link>
                   </div>
                 </div>
               </div>
@@ -122,12 +122,12 @@
                       {{ item.category }}
                     </div>
                   </div>
-                  <a class="item_image" href="shop_details.html">
+                  <RouterLink :to="`/product/${item.id}`" class="item_image" >
                     <img :src="item.imageUrl" alt="image_not_found">
-                  </a>
+                  </RouterLink>
                   <div class="item_content">
                     <h3 class="item_title">
-                      <a href="shop_details.html">{{ item.title }}</a>
+                      <RouterLink :to="`/product/${item.id}`">{{ item.title }}</RouterLink>
                     </h3>
                     <div class="btns_group">
                       <span class="item_price bg_default_brown">NT.{{ item.price }}</span>
