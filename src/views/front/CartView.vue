@@ -1,5 +1,5 @@
 <template>
-    <section class="breadcrumb_section text-uppercase" style="background-image: url(../src/assets/image/innerHeroImg.jpeg);">
+    <section class="breadcrumb_section text-uppercase" :style="{ backgroundImage: `url(${innerHeroImg})` }">
     <div class="container">
       <h1 class="page_title text-white wow fadeInUp" data-wow-delay=".1s">購物車</h1>
       <ul class="breadcrumb_nav ul_li wow fadeInUp" data-wow-delay=".2s">
@@ -85,11 +85,12 @@
 <script>
 import carStore from '../../stores/cart.js'
 import { mapActions, mapState } from 'pinia'
+import innerHeroImg from '@/assets/image/innerHeroImg.jpeg'
 
 export default {
   data () {
     return {
-      
+      innerHeroImg:innerHeroImg
     }
   },
   computed: {

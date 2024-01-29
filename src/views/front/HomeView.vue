@@ -35,7 +35,7 @@
                     <span class="item_serial">1</span>
                     <span class="d-flex align-items-center justify-content-center">
                     
-                    <!-- <img src="../../assets/image/icon_01.png" alt=""> -->
+                    <img src="@/assets/image/icon_01.png" alt="">
                   </span>
                   </div>
                   <h3 class="item_title">獨特風味</h3>
@@ -50,10 +50,7 @@
                   <div class="item_icon">
                     <span class="item_serial">2</span>
                     <span class="d-flex align-items-center justify-content-center">
-                    <div style="background-image: url(../src/assets/image/icon_02.png);background-size: cover;
-                    background-position: center center;
-                    width: 35px;
-                    height: 35px;"></div>
+                      <img src="@/assets/image/icon_02.png" alt="">
                   </span>
                   </div>
                   <h3 class="item_title">新鮮烘焙</h3>
@@ -68,10 +65,7 @@
                   <div class="item_icon">
                     <span class="item_serial">3</span>
                     <span class="d-flex align-items-center justify-content-center">
-                    <div style="background-image: url(../src/assets/image/icon_03.png);background-size: cover;
-                    background-position: center center;
-                    width: 35px;
-                    height: 35px;"></div>
+                      <img src="@/assets/image/icon_03.png" alt="">
                   </span>
                   </div>
                   <h3 class="item_title">精選咖啡豆</h3>
@@ -86,10 +80,7 @@
                   <div class="item_icon">
                     <span class="item_serial">4</span>
                     <span class="d-flex align-items-center justify-content-center">
-                    <div style="background-image: url(../src/assets/image/icon_04.png);background-size: cover;
-                    background-position: center center;
-                    width: 35px;
-                    height: 35px;"></div>
+                      <img src="@/assets/image/icon_04.png" alt="">
                   </span>
                   </div>
                   <h3 class="item_title">獨特氛圍</h3>
@@ -153,10 +144,8 @@
           <div class="container">
             <div class="row align-items-center justify-content-lg-between">
               <div class="col-lg-6 col-md-6 order-last"  data-aos="fade-left">
-                <div class="about_image1 wow fadeInRight" data-wow-delay=".1s">
-                  <!-- <img src="assets/images/cafeImg.jpg" alt="image_not_found"> -->
-                  <div class="w-100" style="background-image: url(../src/assets/image/cafeImg.jpg);background-size: cover;
-            background-position: center center;padding: 188px;background-repeat: no-repeat;"></div>
+                <div class="about_image1 ">
+                  <img src="@/assets/image/cafeImg.jpg" alt="image_not_found">
                 </div>
               </div>
               <div class="col-lg-6 col-md-6"  data-aos="fade-right" data-aos-delay="50">
@@ -210,11 +199,9 @@
           <div class="container-fluid p-0">
             <div class="row g-0">
               <div class="col-lg-4"  data-aos="fade-right">
-                <div class="offer_video wow fadeIn" data-wow-delay=".1s">
+                <div class="offer_video">
                   <div class="overlay"></div>
-                  <!-- <img src="assets/images/offerImg.jpg" alt="image_not_found"> -->
-                  <div class="w-100" style="background-image: url(../src/assets/image/offerImg.jpg);background-size: cover;
-            background-position: center center;padding: 188px;background-repeat: no-repeat;"></div>
+                  <img src="@/assets/image/offerImg.jpg" alt="image_not_found">
                 </div>
               </div>
 
@@ -222,7 +209,7 @@
                 <div class="offer_area">
                   <div class="offer_content">
                     <div class="section_title">
-                      <h2 class="small_title wow fadeInUp" data-wow-delay=".1s"><i class="bi bi-cup-hot-fill"></i> 我們提供</h2>
+                      <h2 class="small_title"><i class="bi bi-cup-hot-fill"></i> 我們提供</h2>
                       <h3 class="big_title wow fadeInUp" data-wow-delay=".2s">
                         精選咖啡文化：<br>我們獨特的品味與服務
                       </h3>
@@ -353,7 +340,7 @@
 </template>
 
 <script>
-import bannerImg from '/src/assets/image/img_01.png'
+import bannerImg from '@/assets/image/img_01.png'
 import carStore from '../../stores/cart'
 import { mapActions, mapState } from 'pinia'
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env

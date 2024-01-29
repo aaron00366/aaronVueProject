@@ -1,5 +1,5 @@
 <template>
-    <section class="breadcrumb_section text-uppercase" style="background-image: url(../src/assets/image/innerHeroImg.jpeg);">
+    <section class="breadcrumb_section text-uppercase" :style="{ backgroundImage: `url(${innerHeroImg})` }">
     <div class="container">
       <h1 class="page_title text-white wow fadeInUp" data-wow-delay=".1s">線上商店</h1>
       <ul class="breadcrumb_nav ul_li wow fadeInUp" data-wow-delay=".2s">
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-    </section>
+  </section>
     <section class="details_section shop_details sec_ptb_120 bg_default_gray">
         <div class="container">
 
@@ -117,6 +117,7 @@
         </section>
 </template>
 <script>
+import innerHeroImg from '@/assets/image/innerHeroImg.jpeg'
 import carStore from '../../stores/cart'
 import { mapActions } from 'pinia'
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
@@ -125,7 +126,8 @@ export default {
   data () {
     return {
       product: {},
-      CategoryProducts: {}
+      CategoryProducts: {},
+      innerHeroImg:innerHeroImg
     }
   },
   methods: {

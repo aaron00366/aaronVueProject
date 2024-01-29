@@ -1,6 +1,6 @@
 <template>
   <div>
-    <footer class="footer_section text-white deco_wrap" style="background-image: url(../src/assets/image/footerImg.png);">
+    <footer class="footer_section text-white deco_wrap" :style="{ backgroundImage: `url(${footerImg})` }">
     <div class="overlay"></div>
     <div class="footer_widget_area">
       <div class="container">
@@ -78,11 +78,14 @@
 </template>
 
 <script>
+import footerImg from '@/assets/image/footerImg.png'
+
 export default {
   name: 'footerComponent',
   data() {
     return {
       footer: 'footer',
+      footerImg: footerImg,
     }
   },
   methods: {

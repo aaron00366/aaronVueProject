@@ -1,5 +1,5 @@
 <template>
-  <section class="breadcrumb_section text-uppercase" style="background-image: url(../src/assets/image/innerHeroImg.jpeg);">
+  <section class="breadcrumb_section text-uppercase"  :style="{ backgroundImage: `url(${innerHeroImg})` }">
     <div class="container">
       <h1 class="page_title text-white wow fadeInUp" data-wow-delay=".1s">關於我們</h1>
       <ul class="breadcrumb_nav ul_li wow fadeInUp" data-wow-delay=".2s">
@@ -10,14 +10,7 @@
     <div class="breadcrumb_icon_wrap">
       <div class="container">
         <div class="breadcrumb_icon wow fadeInUp" data-wow-delay=".3s">
-          <!-- <img src="../src/assets/image/icon_01"> -->
-          <span class="bg_shape d-flex align-items-center justify-content-center">
-            <div style="background-image: url(../src/assets/image/icon_01.png);background-size: cover;
-            background-position: center center;
-            width: 35px;
-            height: 35px;
-            transform: rotate(-45deg);"></div>
-          </span>
+          <img src="@/assets/image/icon_01">
         </div>
       </div>
     </div>
@@ -77,8 +70,13 @@
   </section>
 </template>
 <script>
+import innerHeroImg from '@/assets/image/innerHeroImg.jpeg'
 
 export default {
-
+  data() {
+    return {
+      innerHeroImg:innerHeroImg
+    }
+  },
 }
 </script>

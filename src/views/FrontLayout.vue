@@ -22,15 +22,15 @@
                   <div class="main_menu_inner collapse navbar-collapse" id="main_menu_dropdown">
                     <ul class="main_menu_list ul_li">
                       <li>
-                        <RouterLink class="nav-link" to="/products" role="button">
+                        <RouterLink class="nav-link" to="/products">
                           {{ $t('menu.productContent') }}
                         </RouterLink>
                       </li>
                       <li>
-                        <RouterLink class="nav-link"  to="/about" role="button">{{ $t('menu.aboutUs') }}</RouterLink>
+                        <RouterLink class="nav-link"  to="/about">{{ $t('menu.aboutUs') }}</RouterLink>
                       </li>
                       <li>
-                        <RouterLink class="nav-link" to="/articles" role="button">
+                        <RouterLink class="nav-link" to="/articles">
                           {{ $t('menu.blog') }}
                         </RouterLink>
                       </li>
@@ -85,10 +85,10 @@
     </div>
     <ul class="btns_group ul_li">
     <li>
-    <RouterLink to="cart" class="btn btn_primary">查看購物車</RouterLink>
+    <RouterLink to="/cart" class="btn btn_primary">查看購物車</RouterLink>
     </li>
     <li>
-      <RouterLink to="checkout" class="btn btn_border border_black">結帳</RouterLink>
+      <RouterLink to="/checkout" class="btn btn_border border_black">結帳</RouterLink>
     </li>
     </ul>
 </div>
