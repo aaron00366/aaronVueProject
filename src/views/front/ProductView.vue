@@ -31,25 +31,26 @@
         <div class="col-lg-6 col-md-7">
         <div class="details_content wow fadeInUp" data-wow-delay=".2s">
         <div class="details_flex_title">
-        <h2 class="details_title text-uppercase">{{ product.title }}</h2>
+        <h2 class="details_title">{{ product.title }}</h2>
+        
         </div>
         <p>
         {{product.description}}
         </p>
         <div class="details_price">
-        <strong class="price_text">NT. {{ product.price }}</strong>
+        <strong class="price_text">NT. {{ product.price }} / {{ product.unit }}</strong>
          </div>
          <ul class="btns_group ul_li">
-         <li>
-         <!-- <div class="quantity_input quantity_boxed">
+         <!-- <li>
+         <div class="quantity_input quantity_boxed">
          <h4 class="quantity_title text-uppercase">數量</h4>
          <form action="#">
         <button type="button" class="input_number_decrement">–</button>
         <input class="input_number" type="text" value="2">
         <button type="button" class="input_number_increment">+</button>
          </form>
-         </div> -->
-        </li>
+         </div>
+        </li> -->
          <li>
             <button type="button" class="btn btn_border border_black text-uppercase"  @click="addToCart(product.id)">加入購物車</button>
         </li>
@@ -61,10 +62,10 @@
         <div class="product_description_wrap mt-3">
          <ul class="tabs_nav ul_li nav" role="tablist">
         <li>
-        <button class="active" data-bs-toggle="tab" data-bs-target="#product_description" type="button" role="tab" aria-selected="true">產品敘述</button>
+        <button class="px-4 active" data-bs-toggle="tab" data-bs-target="#product_description" type="button" role="tab" aria-selected="true">產品敘述</button>
         </li>
         <li>
-        <button data-bs-toggle="tab" data-bs-target="#product_additional_info" type="button" role="tab" aria-selected="false">產品內容</button>
+        <button class="px-4" data-bs-toggle="tab" data-bs-target="#product_additional_info" type="button" role="tab" aria-selected="false">產品內容</button>
         </li>
          </ul>
          <div class="tab-content">

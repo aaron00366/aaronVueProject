@@ -3174,7 +3174,7 @@ blockquote i {
   content: "";
   height: 25px;
   position: absolute;
-  background-color: #e5e5e5;
+  /* background-color: #e5e5e5; */
   transform: translateY(-50%);
 }
 
@@ -3272,9 +3272,9 @@ blockquote i {
   margin-bottom: 30px;
   border-bottom: 4px solid #f6f6f6;
 }
-.product_description_wrap .tabs_nav li:not(:last-child) {
+/* .product_description_wrap .tabs_nav li:not(:last-child) {
   margin-right: 155px;
-}
+} */
 .product_description_wrap .tabs_nav button {
   color: #969696;
   font-size: 15px;
