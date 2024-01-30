@@ -126,6 +126,7 @@ export default {
     ...mapActions(carStore, ['getCart', 'deleteItem', 'updateCartItem'])
   },
   mounted () {
+    window.scrollTo(0, 0)
     this.getCart()
   }
 }

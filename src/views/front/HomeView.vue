@@ -445,6 +445,7 @@ export default {
     ...mapState(carStore, ['carts', 'total', 'final_total'])
   },
   mounted () {
+    window.scrollTo(0, 0)
     this.getData()
     this.getIndexSixData()
     this.getCart()

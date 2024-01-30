@@ -73,7 +73,8 @@ export default{
     },
     },
     mounted() {
-        this.getArticles()
+      window.scrollTo(0, 0)
+      this.getArticles()
     },
 }
 </script>

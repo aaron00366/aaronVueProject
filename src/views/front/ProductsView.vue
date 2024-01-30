@@ -126,6 +126,7 @@ export default {
     RouterLink
   },
   mounted () {
+    window.scrollTo(0, 0)
     this.getData()
   }
 }

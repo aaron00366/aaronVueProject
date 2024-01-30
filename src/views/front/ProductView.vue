@@ -147,6 +147,7 @@ export default {
     ...mapActions(carStore, ['addToCart'])
   },
   mounted () {
+    window.scrollTo(0, 0)
     this.getProduct()
   }
 }
