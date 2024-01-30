@@ -17,9 +17,8 @@
       </div>
     </div>
     </section>
-
     <section class="cart_section sec_ptb_120 bg_default_gray">
-        <div class="container container_boxed">
+      <div class="container container_boxed">
             <div class="checkout_form">
               <v-form @submit="addOrder" v-slot="{errors}">
       <div class="row">
@@ -27,7 +26,7 @@
           <div class="form_item">
         <label for="email" class="form-label"><span class="text-danger me-1">*</span>Email</label>
         <v-field id="email" name="email" type="email" class="form-control" rules="email|required" :class="{ 'is-invalid': errors['email'] }"
-                 placeholder="請輸入 Email"></v-field>
+                 placeholder="請輸入 Email" v-model="form.user.email"></v-field>
         <error-message name="email" class="invalid-feedback"></error-message>
       </div>
         </div>
@@ -35,7 +34,7 @@
           <div class="form_item">
         <label for="phone" class="form-label"><span class="text-danger me-1">*</span>電話</label>
         <v-field id="phone" name="tel" type="tel" class="form-control" :rules="isPhone"  :class="{ 'is-invalid': errors['tel'] }"
-                 placeholder="請輸入電話"></v-field>
+                 placeholder="請輸入電話" v-model="form.user.tel"></v-field>
         <error-message name="tel" class="invalid-feedback"></error-message>
       </div>
         </div>
@@ -43,7 +42,7 @@
           <div class="form_item">
         <label for="name" class="form-label"><span class="text-danger me-1">*</span>姓名</label>
         <v-field id="name" name="姓名" type="text" class="form-control" rules="required" :class="{ 'is-invalid': errors['姓名'] }"
-                 placeholder="請輸入 您的姓名"></v-field>
+                 placeholder="請輸入 您的姓名" v-model="form.user.name"></v-field>
         <error-message name="姓名" class="invalid-feedback"></error-message>
       </div>
         </div>
@@ -51,14 +50,14 @@
           <div class="form_item">
         <label for="address" class="form-label"><span class="text-danger me-1">*</span>地址</label>
         <v-field id="address" name="地址" type="text" class="form-control" rules="required" :class="{ 'is-invalid': errors['地址'] }"
-                 placeholder="請輸入地址"></v-field>
+                 placeholder="請輸入地址" v-model="form.user.address"></v-field>
         <error-message name="地址" class="invalid-feedback"></error-message>
       </div>
         </div>
       </div>
       <div class="form_item">
                         <h4 class="form_field_title">留言</h4>
-                        <textarea name="message" placeholder="請輸入留言" v-model="orderData.data.message"></textarea>
+                        <textarea name="message" placeholder="請輸入留言" v-model="form.message"></textarea>
       </div>
       <div class="checkout_form_footer">
       <span class="total_price"><strong>總計:</strong> NT. {{ total }}</span>
@@ -83,16 +82,14 @@ const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
 export default {
   data () {
     return {
-      orderData: {
-        data: {
-          user: {
-            name: '',
-            email: '',
-            tel: '',
-            address: ''
-          },
-          message: ''
-        }
+      form: {
+        user: {
+          name: '',
+          email: '',
+          tel: '',
+          address: '',
+        },
+        message: '',
       },
       innerHeroImg:innerHeroImg
     }
@@ -102,10 +99,10 @@ export default {
   },
   methods: {
     addOrder () {
-      const data = this.orderData
-      this.$http.post(`${VITE_APP_URL}/api/${VITE_APP_PATH}/order`, data)
+      const order = this.form;
+      this.$http.post(`${VITE_APP_URL}/api/${VITE_APP_PATH}/order`, { data: order })
         .then((res) => {
-
+          
           console.log('加入order:', res.data)
           // this.$refs.form.resetForm();
           Swal.fire({
